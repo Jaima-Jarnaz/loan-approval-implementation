@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Loan Approval!</title>
+  </head>
+  <body>
+    <h1 class="text-center">Loan Prediction</h1>
+
+<div class="container bg-dark text-light">
+<div class="row justify-content-center">
+
+
+    <div class="col-md-6">
+        <div class="bg-secondary p-3 m-5">
+            <p>Gender ----> {0: 'Female', 1: 'Male'}</p>
+            <p>Married ----> {0: 'No', 1: 'Yes'}</p>
+            <p>Dependents ----> {0: '0', 1: '1', 2: '2', 3: '3+'}</p>
+            <p>Education ----> {0: 'Graduate', 1: 'Not Graduate'}</p>
+            <p>Self_Employed ----> {0: 'No', 1: 'Yes'}</p>
+            <p>Property_Area ----> {0: 'Rural', 1: 'Semiurban', 2: 'Urban'}</p>
+            <p>Loan_Status ----> {0: 'N', 1: 'Y'}</p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="col-md-6">
+        <form action="predict" method="post" class="m-3 p-2 ">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-md-6">
+                 <div class="form-group">
+                <label for="">Gender</label>
+                <input type="" class="form-control" id="" aria-describedby="emailHelp" name="Gender" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="exampleInputPassword1">Married</label>
+                <input type="" class="form-control" id="" name="Married" required>
+                </div>
+            </div>
+        </div>
+
+
+           <div class="row">
+            <div class="col-md-6">
+                 <div class="form-group">
+                <label for="Dependents">Dependents</label>
+                <input type="" class="form-control" id="" name="Dependents" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="Education">Education</label>
+                <input type="" class="form-control" id="" name="Education" required>
+            </div>
+            </div>
+        </div>
+
+
+           <div class="row">
+            <div class="col-md-6">
+                  <div class="form-group">
+                <label for="Self_Employed">Self_Employed</label>
+                <input type="" class="form-control" id="" name="Self_Employed" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="ApplicantIncome">ApplicantIncome</label>
+                <input type="" class="form-control" id="exampleInputPassword1" name="ApplicantIncome" required>
+            </div>
+            </div>
+        </div>
+
+           <div class="row">
+            <div class="col-md-6">
+                 <div class="form-group">
+                <label for="CoapplicantIncome">CoapplicantIncome</label>
+                <input type="" class="form-control" id="" name="CoapplicantIncome" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="LoanAmount">LoanAmount</label>
+                <input type="" class="form-control" id="" name="LoanAmount" required>
+            </div>
+            </div>
+        </div>
+
+
+  <div class="form-group">
+    <label for="Loan_Amount_Term">Loan_Amount_Term</label>
+    <input type="" class="form-control" id="" name="Loan_Amount_Term" required>
+  </div>
+  <div class="form-group">
+    <label for="Credit_History">Credit_History</label>
+    <input type="" class="form-control" id="" name="Credit_History" required>
+  </div>
+  <div class="form-group">
+    <label for="Property_Area">Property_Area</label>
+    <input type="" class="form-control" id="" name="Property_Area">
+  </div>
+  <input type="submit" class="btn btn-success btn-block font-weight-bold" value="Predict">
+
+</form>
+
+</div>
+</div>
+
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
